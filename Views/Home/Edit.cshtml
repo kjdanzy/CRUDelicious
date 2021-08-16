@@ -1,0 +1,47 @@
+@model Dish
+
+<form action="/dish/submitEdit" method="POST">
+<div>
+    <h1 class="text-center">Edit Dish!</h1>
+    <h4><a href="/">Home</a></h4>
+    <br>
+</div>
+<div class="containerCol">
+        <input type="hidden" asp-for="DishId">
+        <div class="containerSpaceBetween">
+            <div>
+                <label for="Chef">Chef</label><br>
+                <input type="text" asp-for="Chef" id="Chef" >
+                <span class="alert-danger" asp-validation-for="Chef"></span>
+            </div>
+            <div>
+                <label for="Name">Name</label><br>
+                <input type="text" asp-for="Name" id="Name" >
+                <span class="alert-danger" asp-validation-for="Name"></span>
+            </div>
+            <div>
+                <label for="Calories">Calories</label><br>
+                <input type="text" asp-for="Calories" id="Calories" >
+                <span class="alert-danger" asp-validation-for="Calories"></span>
+            </div>
+        </div>
+        <div>
+            <label for="Tastiness">Tastiness</label><br>
+            <select asp-for="Tastiness" id="Tastiness" >
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option> 
+            </select>
+            <span class="alert-danger" asp-validation-for="Tastiness"></span>
+        </div>
+        <div>
+            <label for="Description">Description</label><br>
+            <textarea asp-for="Description" id="Description" cols="30" rows="10"></textarea>
+            <span class="alert-danger" asp-validation-for="Description"></span>
+        </div>
+    </div>
+    <br>
+    <input class="btn btn-success" type="submit" style="float:right;" value="Update Dish">
+</form>

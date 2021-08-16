@@ -1,0 +1,25 @@
+
+<div>
+    <h4><a href="/">Home</a></h4>
+    <h1 class="text-center">@ViewBag.detailDish.Name!</h1>
+    <h3 class="text-center">by @ViewBag.detailDish.Chef</h3>
+    <br>
+</div>
+<div class="containerCol">
+        <div class="containerSpaceBetween">
+            <div>
+                <label for="Description">Description:  @ViewBag.detailDish.Description</label><br>
+            </div>
+            <div>
+                <label for="Calories">Calories:  @ViewBag.detailDish.Calories</label><br>
+            </div>
+            <div>
+                <label for="Tastiness">Tastiness:  @ViewBag.detailDish.Tastiness</label><br>
+            </div>
+        </div>
+</div>
+    <br>
+    <div class="containerRow">
+        <a class="btn btn-danger"  href="/dish/@ViewBag.detailDish.DishId/delete">Delete @ViewBag.detailDish.Name</a>
+        <a class="btn btn-success"  href="/dish/@ViewBag.detailDish.DishId/edit">Edit @ViewBag.detailDish.Name</a>
+    </div>
